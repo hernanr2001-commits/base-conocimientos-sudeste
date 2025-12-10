@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia SYNC - Hypertherm</title>
+    <style>
+        /* BRANDING HYPERTHERM */
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #F9F9F9; margin: 0; padding: 40px 20px; color: #333; }
+        .container { max-width: 950px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 6px solid #F26522; }
+        
+        h1 { color: #000; font-weight: 900; font-size: 2.2em; margin-bottom: 5px; }
+        .subtitle { color: #666; font-size: 1.1em; margin-bottom: 30px; display: block; }
+        
+        h2 { color: #1A1A1A; font-size: 1.4em; border-bottom: 2px solid #F26522; padding-bottom: 10px; margin-top: 40px; font-weight: 600; text-transform: uppercase; }
+
+        /* Matriz de Datos */
+        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; text-align: center; }
+        .matrix-table th { background-color: #1A1A1A; color: white; padding: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9em; }
+        .matrix-table td { border-bottom: 1px solid #ddd; padding: 15px; }
+        .matrix-table tr:nth-child(even) { background-color: #fcfcfc; }
+        
+        .highlight { font-weight: bold; color: #F26522; font-size: 1.1em; }
+        .code { font-family: 'Consolas', monospace; color: #333; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 4px; }
+        
+        .ref-color { display: inline-block; width: 10px; height: 10px; margin-right: 5px; border-radius: 50%; }
+
+        .btn-back { display: inline-block; margin-top: 40px; padding: 12px 30px; background-color: #1A1A1A; color: white; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn-back:hover { background-color: #F26522; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Familia Powermax SYNC™</h1>
+        <span class="subtitle">Sistemas de plasma industrial de próxima generación (65 / 85 / 105)</span>
+
+        <h2>Matriz de Cartuchos SmartSYNC</h2>
+        <p>Seleccione el código de cartucho según el amperaje y la aplicación. El sistema ajustará automáticamente los parámetros.</p>
+        
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th>Amperaje</th>
+                    <th><span class="ref-color" style="background:#FFD700;"></span>Manual</th>
+                    <th><span class="ref-color" style="background:#666;"></span>Mecanizado</th>
+                    <th><span class="ref-color" style="background:#28a745;"></span>Ranurado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="highlight">65 A</td>
+                    <td class="code">428931</td>
+                    <td class="code">428930</td>
+                    <td class="code">428932</td>
+                </tr>
+                <tr>
+                    <td class="highlight">85 A</td>
+                    <td class="code">428935</td>
+                    <td class="code">428934</td>
+                    <td class="code">428938</td>
+                </tr>
+                <tr>
+                    <td class="highlight">105 A</td>
+                    <td class="code">428937</td>
+                    <td class="code">428936</td>
+                    <td class="code">428938</td>
+                </tr>
+                <tr>
+                    <td><strong>FlushCut</strong></td>
+                    <td colspan="3">Cartuchos de corte al ras: 428952 (65A) / 428953 (85A) / 428954 (105A)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Códigos de Torchas SmartSYNC</h2>
+        <ul style="line-height: 2; list-style-type: square; color: #444;">
+            <li><strong>Manual 75° (7.6m):</strong> <span class="code">059726</span> - La opción estándar para operación manual.</li>
+            <li><strong>Manual 15° (7.6m):</strong> <span class="code">059723</span> - Ideal para ranurado.</li>
+            <li><strong>Mecanizada 180° (7.6m):</strong> <span class="code">059733</span> - Para mesas de corte.</li>
+            <li><strong>Mini-Mecanizada (7.6m):</strong> <span class="code">059731</span> - Para robótica y acceso a tuberías.</li>
+        </ul>
+
+        <a href="index.html" class="btn-back">← VOLVER AL MENÚ</a>
+    </div>
+
+</body>
+</html>

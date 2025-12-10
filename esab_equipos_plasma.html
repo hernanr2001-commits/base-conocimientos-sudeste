@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Corte Plasma - ESAB</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        h1 { color: #000; text-transform: uppercase; border-left: 10px solid #FFD700; padding-left: 15px; margin-bottom: 30px; font-weight: 900; }
+        h2 { background-color: #333; color: #FFD700; padding: 10px 15px; margin-top: 40px; border-radius: 4px; font-size: 1.2em; }
+        
+        /* Tarjeta */
+        .product-card { border: 1px solid #e0e0e0; background-color: #fff; padding: 25px; margin-bottom: 30px; border-radius: 6px; border-top: 4px solid #FFD700; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .product-name { font-size: 1.5em; font-weight: bold; color: #000; }
+        .line-badge { background-color: #eee; color: #555; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; }
+        .sap-code { font-family: monospace; color: #666; font-size: 1.1em; display: block; margin-bottom: 15px; }
+        
+        /* Layout */
+        .grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 20px; align-items: start; }
+        .product-img { width: 100%; max-width: 300px; height: auto; border: 1px solid #eee; padding: 5px; border-radius: 4px; display: block; margin: 0 auto; }
+        
+        .description-text { font-size: 0.95em; line-height: 1.6; color: #444; white-space: pre-line; }
+        
+        /* Tablas */
+        .tech-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; border: 1px solid #ddd; }
+        .tech-table th { background-color: #FFD700; color: #000; padding: 10px; text-align: left; width: 30%; border: 1px solid #ccc; }
+        .tech-table td { padding: 8px 10px; border: 1px solid #ddd; }
+        .tech-table tr:nth-child(even) { background-color: #fcfcfc; }
+        
+        /* Subtítulos internos */
+        h4 { color: #000; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 25px; font-size: 1em; text-transform: uppercase; }
+
+        /* Botones */
+        .btn-folleto {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #005f9e; /* Azul Folleto */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+        .btn-folleto:hover { background-color: #004475; }
+        
+        .icon { margin-right: 8px; }
+
+        .btn-back { display: inline-block; margin-top: 30px; padding: 12px 25px; background-color: #000; color: #FFD700; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CORTE POR PLASMA MANUAL</h1>
+
+        <h2>HANDYPLASMA (Portátil LCD)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">HandyPlasma 35i / 45i</span>
+                <span class="line-badge">Línea: LIGHT INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP: 739966 (35i) / 739967 (45i)</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/handyplasma.jpg" alt="ESAB HandyPlasma" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_handyplasma.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Comercial
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        Máquina de corte de plasma manual ligera y portátil, con sólo 13,5kg (incluida la torcha) y con alimentación monofásica 220V 50/60Hz.
+                        Su interfaz no sólo incorpora la última tecnología en un panel de color LCD, sino que también simplifica todo el proceso de configuración para corte.
+                        Con un solo botón, el operador puede seleccionar cada función para satisfacer todas sus necesidades.
+                    </div>
+                    
+                    <table class="tech-table">
+                        <thead>
+                            <tr><th>Modelo</th><th>Corte Recomendado</th><th>Corte Máximo</th><th>Referencia</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>HandyPlasma 35i</strong></td><td>12 mm</td><td>16 mm</td><td>738920</td></tr>
+                            <tr><td><strong>HandyPlasma 45i</strong></td><td>16 mm</td><td>24 mm</td><td>738909</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h4>Consumibles y Accesorios (Torcha HandyPlasma 60A)</h4>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Descripción del Repuesto</th>
+                        <th>Detalle / Medida</th>
+                        <th>Código</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Torcha Completa</strong></td>
+                        <td>HandyPlasma 60 A</td>
+                        <td><strong>743213</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boquilla de Corte</strong></td>
+                        <td>35 A (0.8 mm)</td>
+                        <td><strong>741381</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boquilla de Corte</strong></td>
+                        <td>45 A (0.9 mm)</td>
+                        <td><strong>741382</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Electrodo</strong></td>
+                        <td>60 A</td>
+                        <td><strong>741383</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Difusor de Gas</strong></td>
+                        <td>60 A</td>
+                        <td><strong>741387</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funda de Protección</strong></td>
+                        <td>60 A (Shield Cup)</td>
+                        <td><strong>741385</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distanciador de Torcha</strong></td>
+                        <td>60 A (Standoff)</td>
+                        <td><strong>741384</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>O-Ring</strong></td>
+                        <td>60 A</td>
+                        <td><strong>740166</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Filtro de Línea</strong></td>
+                        <td>Aire</td>
+                        <td><strong>740211</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cartucho de Filtro</strong></td>
+                        <td>Repuesto</td>
+                        <td><strong>740212</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Guía de Corte Circular</strong></td>
+                        <td>Cindal</td>
+                        <td><strong>740213</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>CUTMASTER TRUE SERIES (Pantalla TFT)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">Cutmaster 40+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP: 749102</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/cutmaster_40plus.jpg" alt="Cutmaster 40+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_40plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 40+
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La Cutmaster 40+ es la combinación perfecta de potencia y portabilidad.
+                        Pantalla LCD TFT brillante de 10,9 cm. Muestra Corriente, voltaje y presión del aire.
+                        Equipada con Torcha industrial SL60 1Torch.
+                        Modo de corte de placas y metales expandidos. Gatillo 2T/4T.
+                    </div>
+                    <table class="tech-table">
+                        <tr><th>Alimentación</th><td>120 - 240 V (1 Fase)</td></tr>
+                        <tr><th>Perforación</th><td>12 mm (1/2")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>16 mm (5/8")</td></tr>
+                        <tr><th>Separación Máx</th><td>25 mm (1")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>40% @ 40A</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">Cutmaster 50+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP: 749332</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/cutmaster_50plus.jpg" alt="Cutmaster 50+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_50plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 50+
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        Potencia trifásica en un paquete compacto.
+                        Incluye todas las funciones avanzadas de la serie Plus: Pantalla TFT, purga automática y detección de consumibles.
+                        Ideal para trabajos industriales que requieren mayor capacidad de perforación.
+                    </div>
+                    <table class="tech-table">
+                        <tr><th>Alimentación</th><td>400 V (3 Fases)</td></tr>
+                        <tr><th>Perforación</th><td>16 mm (5/8")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>25 mm (1")</td></tr>
+                        <tr><th>Separación Máx</th><td>32 mm (1 1/4")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>60% @ 50A</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">Cutmaster 70+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP: 749103</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/cutmaster_70plus.jpg" alt="Cutmaster 70+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_70plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 70+
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La máquina más potente de la serie

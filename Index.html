@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Soporte - SUDESTE GASES SRL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES (Identidad Sudeste Gases) --- */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* --- ENCABEZADO --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 5px solid #000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        /* TÍTULO "FUERTE" */
+        .main-title {
+            background-color: #FFD700; /* Amarillo Sudeste */
+            color: #000;
+            padding: 10px 30px;
+            font-weight: 900;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            border-radius: 4px;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+
+        /* --- BARRA DE BÚSQUEDA --- */
+        .search-wrapper {
+            background-color: #222;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px #FFD700;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- SECCIONES GENERALES --- */
+        .brand-section { margin-bottom: 50px; }
+        
+        .section-title {
+            font-size: 1.6em;
+            color: #000;
+            border-left: 8px solid #FFD700; /* Por defecto Amarillo */
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- TARJETAS --- */
+        .card {
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            border-bottom: 3px solid #e0e0e0;
+        }
+        
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+            border-bottom-color: #FFD700; /* Por defecto Amarillo */
+        }
+
+        .card-header {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        /* === ESTILOS ESPECÍFICOS HYPERTHERM === */
+        /* Título de Sección */
+        .brand-section.hypertherm-zone .section-title {
+            border-left-color: #F26522; /* Naranja Hypertherm */
+            color: #1A1A1A;
+            font-family: 'Roboto', sans-serif; /* Tipografía Oficial */
+        }
+        
+        /* Tarjetas Hypertherm */
+        .card.hypertherm {
+            font-family: 'Roboto', sans-serif;
+            border-bottom: 3px solid #1A1A1A;
+        }
+        
+        .card.hypertherm .card-header { 
+            background-color: #1A1A1A; /* Negro Hypertherm */
+            color: #F26522; /* Texto Naranja */
+            font-weight: 900; /* Letra más gruesa */
+        }
+        
+        .card.hypertherm:hover {
+            border-bottom-color: #F26522; /* Borde hover Naranja */
+        }
+        
+        .card.hypertherm .card-body h3 {
+            color: #000;
+            font-weight: 900;
+        }
+
+        /* === ESTILOS OTRAS MARCAS === */
+        .card.esab .card-header { background-color: #FFD700; color: #000; }
+        .card.sumig .card-header { background-color: #e31e24; color: white; }
+
+        .card-body { padding: 20px; flex-grow: 1; }
+        
+        .card-body h3 { 
+            margin-top: 0; 
+            margin-bottom: 10px; 
+            font-size: 1.15em; 
+            color: #222; 
+            font-weight: 700;
+        }
+        
+        .card-body p { 
+            font-size: 0.9em; 
+            color: #666; 
+            margin: 0; 
+            line-height: 1.5; 
+        }
+        
+        #no-results {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo_SG.jpg" alt="Logo Sudeste Gases" class="logo-img">
+            <div class="main-title">Base de Conocimientos Técnica</div>
+        </div>
+    </header>
+
+    <div class="search-wrapper">
+        <input type="text" id="buscador" class="search-input" placeholder="🔍 Buscar producto, código, electrodo o manual...">
+    </div>
+
+    <div class="container">
+        
+        <div id="no-results">No se encontraron productos con ese nombre.</div>
+
+        <div class="brand-section hypertherm-zone">
+            <h2 class="section-title">Hypertherm</h2>
+            <div class="card-grid">
+                
+                <a href="powermax30xp.html" class="card hypertherm">
+                    <div class="card-header">PLASMA MANUAL</div>
+                    <div class="card-body">
+                        <h3>Powermax 30 XP</h3>
+                        <p>Sistema ultra portátil (2 en 1). Consumibles FineCut incluidos.</p>
+                    </div>
+                </a>
+
+                <a href="powermax45.html" class="card hypertherm">
+                    <div class="card-header">PLASMA MANUAL</div>
+                    <div class="card-body">
+                        <h3>Powermax 45 SYNC</h3>
+                        <p>El sistema más vendido. Corte 16mm. Cartuchos SmartSYNC.</p>
+                    </div>
+                </a>
+
+                <a href="powermax_sync.html" class="card hypertherm">
+                    <div class="card-header">FAMILIA SYNC</div>
+                    <div class="card-body">
+                        <h3>Serie SYNC (65/85/105)</h3>
+                        <p>Plataforma industrial inteligente. Matriz completa de cartuchos.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h2 class="section-title">ESAB / CONARCO</h2>
+            <div class="card-grid">
+                
+                <a href="esab_equipos_smaw.html" class="card esab">
+                    <div class="card-header">EQUIPOS SMAW</div>
+                    <div class="card-body">
+                        <h3>Inversores y Rectificadores</h3>
+                        <p>Bantam, HandyArc, Rogue, Renegade y rectificadores industriales.</p>
+                    </div>
+                </a>
+
+                <a href="esab_equipos_tig.html" class="card esab">
+                    <div class="card-header">EQUIPOS TIG</div>
+                    <div class="card-body">
+                        <h3>Rogue ET, Renegade ET, Heliarc</h3>
+                        <p>Equipos DC y AC/DC de alta frecuencia y pulsados.</p>
+                    </div>
+                </a>
+
+                <a href="esab_equipos_mig.html" class="card esab">
+                    <div class="card-header">EQUIPOS MIG/MAG</div>
+                    <div class="card-body">
+                        <h3>Compactas y Semiautomáticas</h3>
+                        <p>HandyArc, Rogue EM, Rustler, Smashweld y Fabricator.</p>
+                    </div>
+                </a>
+
+                <a href="esab_equipos_multiproceso.html" class="card esab">
+                    <div class="card-header">MULTIPROCESO</div>
+                    <div class="card-body">
+                        <h3>Rebel, Warrior y Aristo</h3>
+                        <p>Sistemas todo-en-uno, industriales y de alta tecnología.</p>
+                    </div>
+                </a>
+
+                <a href="esab_equipos_plasma.html" class="card esab">
+                    <div class="card-header">CORTE PLASMA</div>
+                    <div class="card-body">
+                        <h3>HandyPlasma y Cutmaster</h3>
+                        <p>Sistemas manuales con pantalla LCD y torcha 1Torch.</p>
+                    </div>
+                </a>
+
+                <a href="esab_motosoldadoras.html" class="card esab">
+                    <div class="card-header">MOTOSOLDADORAS</div>
+                    <div class="card-body">
+                        <h3>Autónomas (Diesel/Nafta)</h3>
+                        <p>Ruffian y Origo EDW. Generación auxiliar y soldadura en campo.</p>
+                    </div>
+                </a>
+
+                <a href="esab_equipos_laser.html" class="card esab">
+                    <div class="card-header" style="background-color: #000; color: #FFD700;">SOLDADURA LÁSER</div>
+                    <div class="card-body">
+                        <h3>Sumiglaser y Dueler</h3>
+                        <p>Equipos de limpieza y soldadura láser. Seguridad y consumibles.</p>
+                    </div>
+                </a>
+
+                <a href="dualshield7100.html" class="card esab">
+                    <div class="card-header">ALAMBRES TUBULARES</div>
+                    <div class="card-body">
+                        <h3>Dual Shield 7100</h3>
+                        <p>Alambre FCAW rutílico. Incluye <strong>Calculadora de Consumo</strong>.</p>
+                    </div>
+                </a>
+                
+                <a href="esab_electrodos_rutilicos.html" class="card esab">
+                    <div class="card-header">ELECTRODOS RUTÍLICOS</div>
+                    <div class="card-body">
+                        <h3>Conarco 13A / 12D / 24</h3>
+                        <p>Línea completa para herrería y alta deposición. Fichas oficiales.</p>
+                    </div>
+                </a>
+
+                <a href="esab_electrodos_basicos.html" class="card esab">
+                    <div class="card-header">ELECTRODOS BÁSICOS</div>
+                    <div class="card-body">
+                        <h3>Básicos y Especiales</h3>
+                        <p>Conarco 18, Aleados (Cr-Mo), Criogénicos y Alta Resistencia.</p>
+                    </div>
+                </a>
+
+                <a href="esab_electrodos_celulosicos.html" class="card esab">
+                    <div class="card-header">ELECTRODOS CELULÓSICOS</div>
+                    <div class="card-body">
+                        <h3>Pipeweld y Estructural</h3>
+                        <p>Línea completa para Gasoductos (API 5L) y montaje.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h2 class="section-title">Sumig</h2>
+            <div class="card-grid">
+                <a href="sumig_torchas.html" class="card sumig">
+                    <div class="card-header">TORCHAS MIG</div>
+                    <div class="card-body">
+                        <h3>Catálogo SU (Aire/Agua)</h3>
+                        <p>Repuestos, cuellos y capacidades de carga.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align:center; padding: 30px; color: #999; font-size: 0.8em; margin-top: 50px; border-top: 1px solid #ddd; background-color:#fff;">
+        &copy; 2025 Sudeste Gases SRL - Uso Interno - Depto Técnico
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buscador = document.getElementById('buscador');
+            const tarjetas = document.querySelectorAll('.card');
+            const secciones = document.querySelectorAll('.brand-section');
+            const mensajeSinResultados = document.getElementById('no-results');
+
+            buscador.addEventListener('keyup', function(e) {
+                const termino = e.target.value.toLowerCase();
+                let tarjetasVisibles = 0;
+
+                // 1. Filtrar Tarjetas
+                tarjetas.forEach(tarjeta => {
+                    const contenido = tarjeta.innerText.toLowerCase();
+                    if (contenido.includes(termino)) {
+                        tarjeta.style.display = 'flex';
+                        tarjetasVisibles++;
+                    } else {
+                        tarjeta.style.display = 'none';
+                    }
+                });
+
+                // 2. Ocultar secciones vacías
+                secciones.forEach(seccion => {
+                    const visiblesEnSeccion = seccion.querySelectorAll('.card[style="display: flex;"]').length;
+                    
+                    if(termino === '') {
+                        seccion.style.display = 'block';
+                        tarjetas.forEach(t => t.style.display = 'flex');
+                        mensajeSinResultados.style.display = 'none';
+                        return;
+                    }
+
+                    if (visiblesEnSeccion > 0) {
+                        seccion.style.display = 'block';
+                    } else {
+                        seccion.style.display = 'none';
+                    }
+                });
+
+                // 3. Mostrar mensaje si no hay nada
+                if (tarjetasVisibles === 0 && termino !== '') {
+                    mensajeSinResultados.style.display = 'block';
+                } else {
+                    mensajeSinResultados.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

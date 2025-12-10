@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conocimientos - Dual Shield 7100</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { color: #fdbb2f; text-shadow: 1px 1px 0px #333; }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 30px; }
+        
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .specs-table th, .specs-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .specs-table th { background-color: #f0f0f0; }
+
+        .param-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9em; }
+        .param-table th { background-color: #333; color: white; border: 1px solid #333; padding: 8px; }
+        .param-table td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+
+        /* Estilos Calculadora */
+        .calc-box { background-color: #eef5fa; padding: 20px; border-radius: 8px; border: 1px solid #cce0f0; margin-top: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #005f9e; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #004475; }
+        #resultado { margin-top: 15px; font-weight: bold; color: #333; font-size: 1.1em; }
+
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dual Shield 7100 Ultra</h1>
+        <p>Alambre tubular (FCAW) rutílico para todas las posiciones. Diseñado para aceros al carbono de resistencia media.</p>
+
+        <h2>Características Principales</h2>
+        <ul>
+            <li><strong>Tipo:</strong> Tubular con fundente (Flux-Cored)</li>
+            <li><strong>Gas de Protección:</strong> 100% CO2 o Mezcla (75% Ar / 25% CO2)</li>
+            <li><strong>Norma AWS:</strong> A5.20 E71T-1C / E71T-1M</li>
+        </ul>
+
+        <h2>Parámetros de Soldadura (Diámetro 1.2mm)</h2>
+        <table class="param-table">
+            <tr>
+                <th>Corriente (Amps)</th>
+                <th>Voltaje (CO2)</th>
+                <th>Voltaje (Ar/CO2)</th>
+                <th>Velocidad (m/min)</th>
+            </tr>
+            <tr>
+                <td>150 A</td>
+                <td>24 - 25 V</td>
+                <td>23 - 24 V</td>
+                <td>6.4 m/min</td>
+            </tr>
+            <tr>
+                <td>200 A</td>
+                <td>26 - 27 V</td>
+                <td>25 - 26 V</td>
+                <td>8.9 m/min</td>
+            </tr>
+            <tr>
+                <td>250 A</td>
+                <td>28 - 29 V</td>
+                <td>27 - 28 V</td>
+                <td>12.7 m/min</td>
+            </tr>
+        </table>
+
+        <h2>Calculadora de Consumo (Estimada)</h2>
+        <div class="calc-box">
+            <p>Calcula cuánto alambre necesitas para una junta en filete (T).</p>
+            <div class="form-group">
+                <label>Tamaño del Filete / Cateto (mm):</label>
+                <input type="number" id="cateto" placeholder="Ej: 6">
+            </div>
+            <div class="form-group">
+                <label>Longitud total a soldar (metros):</label>
+                <input type="number" id="longitud" placeholder="Ej: 10">
+            </div>
+            <button onclick="calcularConsumo()">Calcular Kilos Necesarios</button>
+            <div id="resultado"></div>
+        </div>
+
+        <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
+    </div>
+
+    <script>
+        function calcularConsumo() {
+            // Entradas
+            let cateto = parseFloat(document.getElementById('cateto').value);
+            let metros = parseFloat(document.getElementById('longitud').value);
+
+            if (isNaN(cateto) || isNaN(metros)) {
+                document.getElementById('resultado').innerHTML = "Por favor ingresa números válidos.";
+                return;
+            }
+
+            // Cálculos
+            // 1. Área del triángulo (mm2) = (cateto * cateto) / 2
+            let area = (cateto * cateto) / 2;
+            
+            // 2. Volumen teórico (cm3) para la longitud dada
+            // Convertimos metros a cm (x100) y area mm2 a cm2 (/100)
+            let volumenCm3 = (area / 100) * (metros * 100);
+
+            // 3. Peso del acero depositado (Densidad aprox 7.85 g/cm3)
+            let pesoDepositadoGr = volumenCm3 * 7.85;
+            let pesoDepositadoKg = pesoDepositadoGr / 1000;
+
+            // 4. Peso de alambre requerido (Considerando eficiencia FCAW ~86%)
+            let eficiencia = 0.86;
+            let alambreRequerido = pesoDepositadoKg / eficiencia;
+
+            // Resultado
+            document.getElementById('resultado').innerHTML = 
+                "Necesitas aprox. <span style='color:#005f9e; font-size:1.2em;'>" + alambreRequerido.toFixed(2) + " Kg</span> de alambre.";
+        }
+    </script>
+
+</body>
+</html>

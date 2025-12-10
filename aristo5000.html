@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conocimientos - ESAB Aristo 5000</title>
+    <style>
+        /* Reutilizamos el estilo para mantener consistencia */
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { color: #fdbb2f; text-shadow: 1px 1px 0px #333; /* Amarillo ESAB con borde sutil */ }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; color: #333; }
+        
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .specs-table th, .specs-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .specs-table th { background-color: #f0f0f0; width: 40%; }
+        
+        /* Estilo para alertas de errores */
+        .error-box { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin-top: 20px; }
+        .error-title { font-weight: bold; display: block; margin-bottom: 5px; }
+
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ESAB Aristo Mig 5000i</h1>
+        <p>Fuente de potencia inversora multiproceso para aplicaciones industriales pesadas y robótica.</p>
+        
+        
+
+        <h2>Especificaciones Técnicas</h2>
+        <table class="specs-table">
+            <tr>
+                <th>Rango de ajuste (MIG/MAG)</th>
+                <td>16 - 500 A</td>
+            </tr>
+            <tr>
+                <th>Voltaje de red</th>
+                <td>400 V, 3 fases, 50/60 Hz</td>
+            </tr>
+            <tr>
+                <th>Ciclo de trabajo (100%)</th>
+                <td>400 A / 34 V</td>
+            </tr>
+            <tr>
+                <th>Ciclo de trabajo (60%)</th>
+                <td>500 A / 39 V</td>
+            </tr>
+            <tr>
+                <th>Clase de protección</th>
+                <td>IP 23</td>
+            </tr>
+            <tr>
+                <th>Procesos compatibles</th>
+                <td>MIG/MAG, Pulsado, SuperPulse, MMA, TIG DC</td>
+            </tr>
+        </table>
+
+        <h2>Solución de Problemas (Robótica/Manual)</h2>
+        
+        <div class="error-box">
+            <span class="error-title">⚠ Error: Fallo en Supervisión de Arco (Arc Supervision Failure)</span>
+            <p><strong>Causa probable:</strong> Problema de comunicación entre la fuente y el controlador del robot (ej. ABB) o falla en el encendido inicial.</p>
+            <p><strong>Solución:</strong> Verificar la conexión del cable de masa (retorno). Comprobar la señal de "Arc Established" en la interfaz del robot. Revisar consumibles de la torcha.</p>
+        </div>
+
+        <div class="error-box">
+            <span class="error-title">⚠ Código de Error: Alta Temperatura</span>
+            <p>Verificar que las rejillas de ventilación no estén obstruidas y que el ventilador funcione correctamente. Comprobar nivel de refrigerante si usa unidad de agua.</p>
+        </div>
+
+        <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
+    </div>
+
+</body>
+</html>

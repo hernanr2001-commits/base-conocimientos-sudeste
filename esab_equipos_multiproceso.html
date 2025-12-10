@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Multiproceso - ESAB</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        h1 { color: #000; text-transform: uppercase; border-left: 10px solid #FFD700; padding-left: 15px; margin-bottom: 30px; font-weight: 900; }
+        h2 { background-color: #333; color: #FFD700; padding: 10px 15px; margin-top: 50px; border-radius: 4px; font-size: 1.3em; letter-spacing: 0.5px; }
+        
+        /* Tarjeta */
+        .product-card { border: 1px solid #e0e0e0; background-color: #fff; padding: 25px; margin-bottom: 30px; border-radius: 6px; border-top: 5px solid #FFD700; position: relative; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .product-name { font-size: 1.5em; font-weight: bold; color: #000; }
+        .line-badge { background-color: #eee; color: #555; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; }
+        .sap-code { font-family: monospace; color: #666; font-size: 1.1em; display: block; margin-bottom: 15px; }
+        
+        /* Layout Imagen + Texto */
+        .grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 20px; align-items: start; }
+        .product-img { width: 100%; max-width: 350px; height: auto; border: 1px solid #eee; padding: 5px; border-radius: 4px; justify-self: center; }
+        
+        .description-text { font-size: 0.95em; line-height: 1.6; color: #444; white-space: pre-line; }
+        
+        /* Tablas */
+        .tech-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; border: 1px solid #ddd; }
+        .tech-table th { background-color: #FFD700; color: #000; padding: 8px; text-align: left; border: 1px solid #ccc; width: 35%; }
+        .tech-table td { padding: 8px 10px; border: 1px solid #ddd; }
+        
+        /* Sección Kits y Botones */
+        .kit-section { background-color: #ffffec; padding: 15px; border-radius: 5px; border: 1px solid #eaddbc; margin-top: 20px; font-size: 0.9em; }
+        .kit-title { font-weight: bold; color: #b7950b; margin-bottom: 5px; display: block; }
+
+        .btn-manual {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #d32f2f; /* Rojo PDF */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-manual:hover { background-color: #b71c1c; }
+
+        .btn-back { display: inline-block; margin-top: 30px; padding: 12px 25px; background-color: #000; color: #FFD700; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>EQUIPOS MULTIPROCESO (MIG/TIG/MMA)</h1>
+
+        <h2>FAMILIA REBEL (Compactas Industriales)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">REBEL EMP 215ic</span>
+                <span class="line-badge">Línea: LIGHT INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1206320 / SAP Fuente: 729420</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/rebel_emp_215ic.jpg" alt="Rebel EMP 215ic" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_rebel_215.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+                
+                <div class="description-text">
+                    Equipo multiproceso real de alto desempeño para soldadura MIG/MAG, TIG y Electrodo Revestido.
+                    Pantalla TFT de 4,3" con interfaz en varios idiomas.
+                    Tecnología sMIG ("Smart MIG") que aprende y se adapta continuamente a la técnica del operador para proporcionar un arco estable y soldaduras repetibles superiores.
+                    Diseño industrial robusto con jaula antivuelco de cinco manijas.
+                    Fuente Rebel EMP215ic, Torcha MIG Tweco Fusion 180A con cables de 3,6m, juego de picos de contacto y rodillos de tracción, muestra de alambre MIG ESAB 0,8mm, Pinza porta-electrodos Tweco, pinza de masa Tweco con cable, muestra de electrodos E6013, torcha TIG Tweco con accesorios y Regulador ESAB con Flujómetro.
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <tr><th>Alimentación</th><td>120 / 230 V (Automático)</td></tr>
+                <tr><th>Rango de Corriente</th><td>5 – 240 A</td></tr>
+                <tr><th>Ciclo de Trabajo MIG</th><td>205 A @ 25% (230V)</td></tr>
+                <tr><th>Procesos</th><td>MIG/MAG, TIG Lift, Electrodo, Flux-Cored</td></tr>
+                <tr><th>Peso</th><td>18,2 kg</td></tr>
+            </table>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">REBEL EMP 235ic</span>
+                <span class="line-badge">Línea: LIGHT INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1206883 / SAP Fuente: 736664</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/rebel_emp_235ic.jpg" alt="Rebel EMP 235ic" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_rebel_235.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+                
+                <div class="description-text">
+                    La Rebel EMP 235ic ofrece el mejor rendimiento de su clase en MIG, TIG y Electrodo.
+                    Tiene la capacidad de usar alambres de hasta 1.2 mm en bobinas de 15 kg (300mm).
+                    Ideal para talleres que requieren mayor potencia y autonomía que la 215ic.
+                    Fuente Rebel EMP235ic, Torcha MIG Tweco Fusion 250A con cables de 4,6m, rodillos de tracción, Pinza porta-electrodos Tweco, pinza de masa Tweco con cable, Regulador ESAB con Flujómetro.
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <tr><th>Alimentación</th><td>120 / 230 V (Automático)</td></tr>
+                <tr><th>Rango de Corriente</th><td>5 – 250 A</td></tr>
+                <tr><th>Ciclo de Trabajo MIG</th><td>235 A @ 40% (230V)</td></tr>
+                <tr><th>Bobinas de alambre</th><td>Hasta 15 kg (300 mm)</td></tr>
+                <tr><th>Peso</th><td>24 kg</td></tr>
+            </table>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">REBEL EMP 320ic</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1210045 / SAP Fuente: 740823</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/rebel_emp_320ic.jpg" alt="Rebel EMP 320ic" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_rebel_320.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+
+                <div class="description-text">
+                    La Rebel EMP 320ic es una máquina trifásica multiproceso de alto rendimiento.
+                    Capacidad industrial real con un ciclo de trabajo de 40% a 320 Amperes.
+                    Sistema de alimentación de 4 rodillos de alta precisión.
+                    Interfaz digital avanzada con memorias programables y tecnología sMIG.
+                    Apta para electrodos celulósicos (6010).
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <tr><th>Alimentación</th><td>3 x 380/440 V</td></tr>
+                <tr><th>Rango de Corriente</th><td>5 – 350 A</td></tr>
+                <tr><th>Ciclo de Trabajo</th><td>320 A @ 40% <br> 255 A @ 60%</td></tr>
+                <tr><th>Sistema de Arrastre</th><td>4 Rodillos</td></tr>
+                <tr><th>Peso</th><td>31,4 kg</td></tr>
+            </table>
+        </div>
+
+        <h2>FAMILIA WARRIOR (Multiproceso Pesado)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">WARRIOR 400i / 500i CC/CV</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP Kits: 1205985 (400i) / 1205986 (500i)</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/warrior_multiproceso.jpg" alt="Warrior 400i/500i" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_warrior.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+
+                <div class="description-text">
+                    Equipo multiproceso destinado a soldadura MIG/MAG, MMA, TIG y Repelado.
+                    Equipos inversores con grandes ahorros de energía, robustos y confiables con alto factor de trabajo.
+                    Excelente performance utilizando CO2 o electrodos celulósicos.
+                    Salida lineal de inductancia. Óptimo control de soldadura.
+                    Panel simple e intuitivo y pantalla con alta luminosidad que permite leerse incluso con luz solar intensa.
+                    Se utiliza con alimentador externo Warrior Feed 304.
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <thead>
+                    <tr><th>Modelo</th><th>Salida Máxima</th><th>Ciclo Trabajo</th><th>Alimentación</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Warrior 400i</td><td>400 A</td><td>400A @ 60% / 300A @ 100%</td><td>3x380V</td></tr>
+                    <tr><td>Warrior 500i</td><td>500 A</td><td>500A @ 60% / 400A @ 100%</td><td>3x380V</td></tr>
+                </tbody>
+            </table>
+
+            <div class="kit-section">
+                <span class="kit-title">LOS KITS INCLUYEN:</span>
+                Fuente de poder + Cables de soldadura 500A OKC 50 + Pinza de masa. (Alimentador se cotiza aparte o en kits completos).
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">WARRIOR 750i Arcair</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1210250 (Con Alimentador)</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/warrior_750i.jpg" alt="Warrior 750i" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_warrior_750.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+
+                <div class="description-text">
+                    Toda la fiabilidad de la línea equipos multiprocesos Warrior ahora con más potencia.
+                    Diseñado para trabajos intensos, productividad extrema y situaciones exigentes.
+                    La Warrior 750i ahora con 850A en un ciclo de 35% y 750A en un ciclo de 100%.
+                    Gouging (Repelado) – capacidad y performance inigualable con electrodos de carbón de hasta 12,7 mm.
+                    Junto con Robust Feed PRO podemos ofrecer una solución robusta, confiable y altamente portátil.
+                </div>
+            </div>
+            
+            <table class="tech-table">
+                <tr><th>Corriente Máxima</th><td>820 A</td></tr>
+                <tr><th>Ciclo de Trabajo</th><td>750 A @ 100%</td></tr>
+                <tr><th>Eficiencia</th><td>91%</td></tr>
+                <tr><th>Voltaje de entrada</th><td>380 - 575 V (Amplio rango)</td></tr>
+            </table>
+        </div>
+
+        <h2>ALTAS PRESTACIONES (Aristo & Edge)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">ARISTO 500ix</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL / PULSADO</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1210553</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/aristo_500ix.jpg" alt="Aristo 500ix" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_aristo_500.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+
+                <div class="description-text">
+                    El nuevo sistema Aristo es mucho más avanzado, robusto y eficiente.
+                    Excelente estabilidad de arco con controles y ajustes avanzados para soldadura Pulsada y SuperPulse.
+                    Funciones como QSet (ajuste automático inteligente), Hotstart, líneas sinérgicas para todos los materiales (Aluminio, Inox, Acero).
+                    Ideal para automatización y robótica o soldadura manual de altísima calidad.
+                    Se combina con alimentadores Robust Feed U6 o U82.
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <tr><th>Salida Máxima</th><td>500 A</td></tr>
+                <tr><th>Ciclo de Trabajo</th><td>500 A @ 60% / 400 A @ 100%</td></tr>
+                <tr><th>Clase Protección</th><td>IP 23S</td></tr>
+                <tr><th>Procesos Especiales</th><td>SuperPulse, QSet, Líneas Sinérgicas</td></tr>
+            </table>
+        </div>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">WARRIOR EDGE 500 CX / DX</span>
+                <span class="line-badge">Línea: HIGH TECH</span>
+            </div>
+            <span class="sap-code">SAP KIT: 1212770</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/warrior_edge.jpg" alt="Warrior Edge" class="product-img" onerror="this.style.display='none'">
+                    <a href="Manuales/manual_warrior_edge.pdf" class="btn-manual" target="_blank">📄 Ver Manual / Folleto</a>
+                </div>
+
+                <div class="description-text">
+                    Warrior Edge 500 es una soldadora multiproceso fácil de usar y de alto rendimiento con funciones de conectividad WeldCloud integradas.
+                    Equipada con TrueFlow, el sistema digital de control de flujo de gas, gestiona los recursos consumibles para reducir el consumo de gas.
+                    Proceso MIG de pulso optimizado adaptable que compensa la variación del operador.
+                    
+                    <strong>Modelo CXII:</strong> Incluye modo SPEED (altos parámetros) y CRAFT (doble pulso aluminio).
+                    <strong>Modelo DX:</strong> Incluye modos THIN (chapas delgadas) y ROOT/ROOT-P (pasada de raíz en tuberías).
+                </div>
+            </div>
+
+            <table class="tech-table">
+                <tr><th>Ciclo de Trabajo</th><td>500 A @ 60% / 400 A @ 100%</td></tr>
+                <tr><th>Alimentador</th><td>Robust Feed Edge (Conectividad DGC)</td></tr>
+                <tr><th>Conectividad</th><td>WeldCloud Integrado</td></tr>
+                <tr><th>Modos Exclusivos</th><td>Speed, Craft, Thin, Root, Root-Pipe</td></tr>
+            </table>
+        </div>
+
+        <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia Atom Arc 8018 - Sudeste Gases</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS GLOBALES (CSS) --- */
+        :root {
+            --color-primario: #ffc20e; /* Amarillo ESAB / Logo */
+            --color-secundario: #000000; /* Negro Logo */
+            --color-fondo: #f0f2f5;
+            --color-texto: #333;
+            --color-tarjeta: #ffffff;
+            --sombra-tarjeta: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        /* --- ENCABEZADO (IDÉNTICO AL INDEX) --- */
+        .header {
+            background-color: var(--color-primario);
+            color: var(--color-secundario); 
+            padding: 15px 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            height: 50px; 
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 900; 
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: var(--color-tarjeta);
+            border-radius: 8px;
+            box-shadow: var(--sombra-tarjeta);
+        }
+
+        /* --- TÍTULO DE PÁGINA Y BOTÓN DE VOLVER --- */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--color-primario);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .page-header h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--color-secundario);
+        }
+        .back-link {
+            display: inline-block;
+            background-color: var(--color-secundario);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .back-link:hover {
+            background-color: #333;
+            color: var(--color-primario);
+        }
+
+        /* --- ESTILOS DE TABLAS --- */
+        h3 {
+            font-size: 22px;
+            color: var(--color-secundario);
+            font-weight: 700;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .content-table th, .content-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .content-table th {
+            background-color: var(--color-secundario);
+            color: white;
+            font-weight: 700;
+        }
+        .content-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .content-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .content-table td:first-child {
+            font-weight: 700; /* Pone el nombre del electrodo en negrita */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <img src="logo_SG.jpg" alt="Logo Sudeste Gases" class="logo">
+            <div>
+                <h1>Base de Conocimientos</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="page-header">
+            <h2>Consumibles: Familia Atom Arc E8018</h2>
+            <a href="index.html" class="back-link">&larr; Volver al Inicio</a>
+        </div>
+
+        <p>Análisis de los electrodos de baja aleación ESAB Atom Arc E8018. [cite_start]Todos comparten una clasificación base E8018 (todas posiciones, bajo hidrógeno H4R, 80 ksi de resistencia) [cite: 15, 39, 70, 97, 121, 147, 170, 202, 228] [cite_start]y operan con AC o DC+[cite: 20, 44, 74, 101, 120, 152, 172, 200, 230]. La diferencia clave radica en su aleación (sufijo) y aplicación.</p>
+
+        <h3>Grupo 1: Aleaciones al Níquel (Ni) - Para Baja Temperatura y Tenacidad</h3>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Electrodo</th>
+                    <th>Clasificación AWS</th>
+                    <th>Aleación Principal (Típica)</th>
+                    <th>Aplicación Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8018-C1</td>
+                    [cite_start]<td>E8018-C1H4R [cite: 228]</td>
+                    [cite_start]<td>2.41% Ni [cite: 234]</td>
+                    <td>Aceros al Ni (ASTM A203 Gr. A/B, A350 Gr. LF1/LF2). [cite_start]Recipientes para gases licuados. [cite: 225, 226]</td>
+                </tr>
+                <tr>
+                    <td>8018-N</td>
+                    [cite_start]<td>E8018-C2H4R [cite: 122]</td>
+                    [cite_start]<td>3.29% Ni [cite: 126]</td>
+                    [cite_start]<td>Para aceros 2-4% Ni[cite: 117]. [cite_start]Donde se requiere alta tenacidad (notch toughness) a baja temperatura[cite: 116].</td>
+                </tr>
+                <tr>
+                    <td>8018-NM</td>
+                    [cite_start]<td>E8018-NMH4R [cite: 40]</td>
+                    [cite_start]<td>0.95% Ni, 0.47% Mo [cite: 49]</td>
+                    [cite_start]<td>Aceros Mn-Mo-Ni[cite: 34]. [cite_start]Específico para recipientes de reactores nucleares con relevos de tensión largos[cite: 35].</td>
+                </tr>
+                <tr>
+                    <td>8018-SR</td>
+                    [cite_start]<td>E8018-GH4R [cite: 203]</td>
+                    [cite_start]<td>0.90% Ni, 0.26% Mo [cite: 212]</td>
+                    [cite_start]<td>Mantiene 80 ksi de resistencia después de relevos de tensión (SR) prolongados (ej. 50 horas)[cite: 196, 201].</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Grupo 2: Aleaciones Cromo-Molibdeno (Cr-Mo) - Para Alta Temperatura (Creep Resistance)</h3>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Electrodo</th>
+                    <th>Clasificación AWS</th>
+                    <th>Aleación Principal (Típica)</th>
+                    <th>Aplicación Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8018-CM</td>
+                    [cite_start]<td>E8018-B2H4R [cite: 170]</td>
+                    [cite_start]<td>1.30% Cr, 0.57% Mo [cite: 176]</td>
+                    [cite_start]<td>Aceros 1 1/4% Cr-1/2% Mo[cite: 168]. [cite_start]Tuberías de potencia (power piping) y calderas[cite: 169].</td>
+                </tr>
+                <tr>
+                    <td>8018-B3L</td>
+                    [cite_start]<td>E8018-B3LH4R [cite: 71]</td>
+                    [cite_start]<td>2.30% Cr, 1.10% Mo (Bajo C) [cite: 77]</td>
+                    [cite_start]<td>Aceros 2 1/4% Cr-1% Mo[cite: 63]. [cite_start]El Bajo Carbono (L) da resistencia a la fisuración[cite: 65].</td>
+                </tr>
+                <tr>
+                    <td>8018-B6</td>
+                    [cite_start]<td>E8018-B6H4R [cite: 16]</td>
+                    [cite_start]<td>5.30% Cr, 0.60% Mo [cite: 22]</td>
+                    [cite_start]<td>Aceros 5% Cr-1/2% Mo (como A335-P5)[cite: 10]. [cite_start]Tuberías y recipientes para alta temperatura[cite: 11].</td>
+                </tr>
+                <tr>
+                    <td>8018-B6L</td>
+                    [cite_start]<td>E8018-B6LH4R [cite: 97]</td>
+                    [cite_start]<td>5.40% Cr, 0.60% Mo (Bajo C) [cite: 104]</td>
+                    [cite_start]<td>Idem B6[cite: 90]. [cite_start]El Bajo Carbono (L) se usa donde el ataque por hidrógeno es un riesgo (petroquímica)[cite: 91].</td>
+                </tr>
+                <tr>
+                    <td>8018-B8</td>
+                    [cite_start]<td>E8018-B8H4R [cite: 148]</td>
+                    [cite_start]<td>8.60% Cr, 1.00% Mo [cite: 155]</td>
+                    [cite_start]<td>Aceros 9% Cr-1% Mo (como A335-P9)[cite: 142]. [cite_start]Servicio de muy alta temperatura[cite: 143].</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+</body>
+</html>

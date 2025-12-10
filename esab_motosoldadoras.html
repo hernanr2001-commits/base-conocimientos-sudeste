@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motosoldadoras - ESAB</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        h1 { color: #000; text-transform: uppercase; border-left: 10px solid #FFD700; padding-left: 15px; margin-bottom: 30px; font-weight: 900; }
+        h2 { background-color: #333; color: #FFD700; padding: 10px 15px; margin-top: 40px; border-radius: 4px; font-size: 1.2em; }
+        
+        /* Tarjeta */
+        .product-card { border: 1px solid #e0e0e0; background-color: #fff; padding: 25px; margin-bottom: 30px; border-radius: 6px; border-top: 4px solid #FFD700; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .product-name { font-size: 1.5em; font-weight: bold; color: #000; }
+        .line-badge { background-color: #eee; color: #555; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; }
+        .sap-code { font-family: monospace; color: #666; font-size: 1.1em; display: block; margin-bottom: 15px; }
+        
+        /* Layout */
+        .grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 20px; align-items: start; }
+        .product-img { width: 100%; max-width: 350px; height: auto; border: 1px solid #eee; padding: 5px; border-radius: 4px; display: block; margin: 0 auto; }
+        
+        .description-text { font-size: 0.95em; line-height: 1.6; color: #444; white-space: pre-line; }
+        
+        /* Tablas */
+        .tech-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; border: 1px solid #ddd; }
+        .tech-table th { background-color: #FFD700; color: #000; padding: 10px; text-align: left; width: 35%; border: 1px solid #ccc; }
+        .tech-table td { padding: 8px 10px; border: 1px solid #ddd; }
+        .tech-table tr:nth-child(even) { background-color: #f9f9f9; }
+        
+        /* Botones */
+        .btn-folleto {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #005f9e; /* Azul Folleto */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+        .btn-folleto:hover { background-color: #004475; }
+        
+        .icon { margin-right: 8px; }
+
+        .btn-back { display: inline-block; margin-top: 30px; padding: 12px 25px; background-color: #000; color: #FFD700; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>MOTOSOLDADORAS (AUTÓNOMAS)</h1>
+
+        <h2>LÍNEA PORTÁTIL (Nafta)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">RUFFIAN ES 150G</span>
+                <span class="line-badge">Línea: FIELD / PORTABLE</span>
+            </div>
+            <span class="sap-code">SAP: 749005</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/ruffian_150g.jpg" alt="Ruffian ES 150G" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_ruffian_150g.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Comercial
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La Ruffian ES 150G es una motosoldadora todo-en-uno que combina una soldadora de electrodo (CC) y un generador de CA, ligera y potente.
+                        Como soldadora, utiliza tecnología inverter para proporcionar hasta 150 A de potencia fiable con un arco muy estable.
+                        Como generador, utiliza un motor Kohler de 14 HP para ofrecer una potencia pico de 4.5 kW.
+                        Incluye tomacorrientes de 120 y 240 V CA para herramientas, luces o incluso equipos de plasma ligeros.
+                        Ideal para: Hobbistas, reparación y mantenimiento, maquinaria agrícola y construcción civil ligera.
+                    </div>
+                    
+                    <table class="tech-table">
+                        <tr><th>Rango de Corriente</th><td>20 - 150 A (DC)</td></tr>
+                        <tr><th>Ciclo de Trabajo (Soldadura)</th><td>150 A @ 60% <br> 115 A @ 100%</td></tr>
+                        <tr><th>Motor</th><td>Kohler Command PRO CH440 (14 HP) - Nafta</td></tr>
+                        <tr><th>Potencia Generador</th><td>4.5 kW (Pico) / 4 kW (Continuo)</td></tr>
+                        <tr><th>Salida Auxiliar</th><td>120/240 V CA (Monofásica)</td></tr>
+                        <tr><th>Tanque / Peso</th><td>22.7 Litros / 101.5 kg</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h2>LÍNEA ORIGO EDW (Industrial)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">ORIGO EDW SERIES (251 / 320 / 551 / 601)</span>
+                <span class="line-badge">Línea: HEAVY DUTY</span>
+            </div>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/origo_edw.jpg" alt="Origo EDW Series" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_origo_edw.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Comercial
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La serie Origo EDW está compuesta por motosoldadoras industriales diseñadas para trabajos en lugares remotos y condiciones exigentes (minería, oleoductos).
+                        Capaces de soldar en procesos SMAW (Electrodos), TIG (GTAW), MIG (GMAW) y Repelado (CAC-A).
+                        Equipadas con motores diesel Kohler (modelo 251) y Perkins refrigerados por líquido (modelos mayores), garantizan durabilidad y bajo consumo.
+                        Salida de generador auxiliar de alta potencia (hasta 20 kVA en modelo 601) para alimentar obras completas.
+                        Gabinete cerrado para protección y menor ruido.
+                    </div>
+                    
+                    <table class="tech-table">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Motor / HP</th>
+                                <th>Salida Máx / Ciclo</th>
+                                <th>Generador Aux.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Origo 251 EDW</strong></td>
+                                <td>Kohler (Gasolina) 23.5 HP</td>
+                                <td>250 A @ 100%</td>
+                                <td>10 kW (1F)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Origo 320 EDW</strong></td>
+                                <td>Diesel 3 Cil.</td>
+                                <td>300 A @ 60%</td>
+                                <td>6 kVA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Origo 551D EDW</strong></td>
+                                <td>Perkins 404D-22G (32.6 HP)</td>
+                                <td>400 A @ 100% / 500 A @ 60%</td>
+                                <td>15 kW (3F) / 4 kW (1F)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Origo 601D EDW</strong></td>
+                                <td>Perkins 1103A-33G (47 HP)</td>
+                                <td>500 A @ 100% / 600 A @ 60%</td>
+                                <td>20 kW (3F) / 6.6 kW (1F)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
+    </div>
+
+</body>
+</html>
