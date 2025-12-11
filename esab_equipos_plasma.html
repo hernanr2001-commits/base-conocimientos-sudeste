@@ -31,8 +31,15 @@
         .tech-table td { padding: 8px 10px; border: 1px solid #ddd; }
         .tech-table tr:nth-child(even) { background-color: #fcfcfc; }
         
-        /* Subtítulos internos */
+        /* Títulos de sección interna */
         h4 { color: #000; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 25px; font-size: 1em; text-transform: uppercase; }
+        
+        /* Tabla de Consumibles CSV */
+        .parts-table { width: 100%; font-size: 0.85em; border-collapse: collapse; margin-top: 20px; }
+        .parts-table th { background-color: #222; color: #fff; padding: 8px; text-align: left; }
+        .parts-table td { padding: 8px; border-bottom: 1px solid #ddd; }
+        .parts-table tr:hover { background-color: #fffbe6; }
+        .code-col { font-family: monospace; font-weight: bold; color: #005f9e; }
 
         /* Botones */
         .btn-folleto {
@@ -108,66 +115,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Torcha Completa</strong></td>
-                        <td>HandyPlasma 60 A</td>
-                        <td><strong>743213</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boquilla de Corte</strong></td>
-                        <td>35 A (0.8 mm)</td>
-                        <td><strong>741381</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boquilla de Corte</strong></td>
-                        <td>45 A (0.9 mm)</td>
-                        <td><strong>741382</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Electrodo</strong></td>
-                        <td>60 A</td>
-                        <td><strong>741383</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Difusor de Gas</strong></td>
-                        <td>60 A</td>
-                        <td><strong>741387</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Funda de Protección</strong></td>
-                        <td>60 A (Shield Cup)</td>
-                        <td><strong>741385</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Distanciador de Torcha</strong></td>
-                        <td>60 A (Standoff)</td>
-                        <td><strong>741384</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>O-Ring</strong></td>
-                        <td>60 A</td>
-                        <td><strong>740166</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Filtro de Línea</strong></td>
-                        <td>Aire</td>
-                        <td><strong>740211</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cartucho de Filtro</strong></td>
-                        <td>Repuesto</td>
-                        <td><strong>740212</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Guía de Corte Circular</strong></td>
-                        <td>Cindal</td>
-                        <td><strong>740213</strong></td>
-                    </tr>
+                    <tr><td><strong>Torcha Completa</strong></td><td>HandyPlasma 60 A</td><td><strong>743213</strong></td></tr>
+                    <tr><td><strong>Boquilla de Corte</strong></td><td>35 A (0.8 mm)</td><td><strong>741381</strong></td></tr>
+                    <tr><td><strong>Boquilla de Corte</strong></td><td>45 A (0.9 mm)</td><td><strong>741382</strong></td></tr>
+                    <tr><td><strong>Electrodo</strong></td><td>60 A</td><td><strong>741383</strong></td></tr>
+                    <tr><td><strong>Difusor de Gas</strong></td><td>60 A</td><td><strong>741387</strong></td></tr>
+                    <tr><td><strong>Funda de Protección</strong></td><td>60 A (Shield Cup)</td><td><strong>741385</strong></td></tr>
+                    <tr><td><strong>Distanciador de Torcha</strong></td><td>60 A (Standoff)</td><td><strong>741384</strong></td></tr>
+                    <tr><td><strong>O-Ring</strong></td><td>60 A</td><td><strong>740166</strong></td></tr>
+                    <tr><td><strong>Filtro de Línea</strong></td><td>Aire</td><td><strong>740211</strong></td></tr>
+                    <tr><td><strong>Cartucho de Filtro</strong></td><td>Repuesto</td><td><strong>740212</strong></td></tr>
+                    <tr><td><strong>Guía de Corte Circular</strong></td><td>Cindal</td><td><strong>740213</strong></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <h2>CUTMASTER TRUE SERIES (Pantalla TFT)</h2>
+        <h2>CUTMASTER TRUE SERIES (Torchas 1Torch SL60/SL100)</h2>
 
         <div class="product-card">
             <div class="card-header">
@@ -251,4 +214,66 @@
                 
                 <div>
                     <div class="description-text">
-                        La máquina más potente de la serie
+                        La máquina más potente de la serie Plus.
+                        Diseñada para entornos de fabricación pesada donde la velocidad y el espesor de corte son críticos.
+                        Interfaz CNC disponible para integración en mesas de corte.
+                    </div>
+                    <table class="tech-table">
+                        <tr><th>Alimentación</th><td>400 V (3 Fases)</td></tr>
+                        <tr><th>Perforación</th><td>20 mm (3/4")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>30 mm (1 1/8")</td></tr>
+                        <tr><th>Separación Máx</th><td>38 mm (1 1/2")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>50% @ 70A</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" style="border-top: 5px solid #000;">
+            <div class="card-header" style="background-color:#222; color:white;">
+                <span class="product-name" style="color:white;">CONSUMIBLES ORIGINALES VICTOR</span>
+                <span class="line-badge">TORCHAS SL60 / SL100</span>
+            </div>
+            
+            <div class="description-text">
+                Listado de códigos de repuesto originales para la serie Cutmaster True Series y Cutmaster Plus.
+                Incluye electrodos, capuchones mecanizados y puntas de ranurado.
+            </div>
+
+            <table class="parts-table">
+                <thead>
+                    <tr>
+                        <th>Código SAP</th>
+                        <th>Descripción del Producto</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="code-col">730782</td><td>ELECTRODO SL40 (9-0096)</td><td>Electrodo (Standard)</td></tr>
+                    <tr><td class="code-col">730804</td><td>ELECTRODO SL60/SL100 (9-8215)</td><td>Electrodo (Standard)</td></tr>
+                    <tr><td class="code-col">732597</td><td>ELECTRODO MECANIZADO SL100 (9-8232)</td><td>Electrodo (Mecanizado)</td></tr>
+
+                    <tr><td class="code-col">730822</td><td>SHIELD CAP, DRAG, 40A SL60/SL100 (9-8244)</td><td>Deflector de Arrastre</td></tr>
+                    <tr><td class="code-col">730826</td><td>SHIELD CAP, DRAG, 50-60A SL60/SL100 (9-8235)</td><td>Deflector de Arrastre</td></tr>
+                    <tr><td class="code-col">731677</td><td>CAPUCHON MECANIZADO 40AMP (9-8245)</td><td>Capuchón Mecanizado</td></tr>
+                    <tr><td class="code-col">731674</td><td>CAPUCHON MECANIZADO 50/60AMP (9-8238)</td><td>Capuchón Mecanizado</td></tr>
+                    <tr><td class="code-col">731675</td><td>CAPUCHON MECANIZADO 70/100AMP (9-8239)</td><td>Capuchón Mecanizado</td></tr>
+
+                    <tr><td class="code-col">730832</td><td>GOUGING TIP A SL60/SL100 (9-8225)</td><td>Ranurado (Perfil A)</td></tr>
+                    <tr><td class="code-col">730833</td><td>GOUGING TIP B SL60/SL100 (9-8226)</td><td>Ranurado (Perfil B)</td></tr>
+                    <tr><td class="code-col">730834</td><td>GOUGING TIP C SL60/SL100 (9-8227)</td><td>Ranurado (Perfil C)</td></tr>
+                    <tr><td class="code-col">730835</td><td>GOUGING TIP D SL60/SL100 (9-8228)</td><td>Ranurado (Perfil D)</td></tr>
+
+                    <tr><td class="code-col">734469</td><td>CABEZA DE TORCHA - SL 60/ SL 100</td><td>Repuesto Torcha</td></tr>
+                    <tr><td class="code-col">732781</td><td>O-RING (SL60) - Torcha mecanizada SL (8-3486)</td><td>Juntas / O-Ring</td></tr>
+                    <tr><td class="code-col">734468</td><td>O-RING GRANDE- SL 60/ SL 100 - SL</td><td>Juntas / O-Ring</td></tr>
+                    <tr><td class="code-col">734510</td><td>Ohmic Clip SL60/SL100 (9-8259)</td><td>Clip Óhmico (CNC)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
+    </div>
+
+</body>
+</html>
