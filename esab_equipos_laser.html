@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipos Soldadura Láser</title>
+    <title>Equipos Corte Plasma - ESAB</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
         .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -11,38 +11,54 @@
         h1 { color: #000; text-transform: uppercase; border-left: 10px solid #FFD700; padding-left: 15px; margin-bottom: 30px; font-weight: 900; }
         h2 { background-color: #333; color: #FFD700; padding: 10px 15px; margin-top: 40px; border-radius: 4px; font-size: 1.2em; }
         
+        /* Tarjeta */
         .product-card { border: 1px solid #e0e0e0; background-color: #fff; padding: 25px; margin-bottom: 30px; border-radius: 6px; border-top: 4px solid #FFD700; }
         
-        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         .product-name { font-size: 1.5em; font-weight: bold; color: #000; }
         .line-badge { background-color: #eee; color: #555; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; }
         .sap-code { font-family: monospace; color: #666; font-size: 1.1em; display: block; margin-bottom: 15px; }
         
+        /* Layout */
         .grid-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 20px; align-items: start; }
-        .product-img { width: 100%; max-width: 350px; height: auto; border: 1px solid #eee; padding: 5px; border-radius: 4px; display: block; margin: 0 auto; }
+        .product-img { width: 100%; max-width: 300px; height: auto; border: 1px solid #eee; padding: 5px; border-radius: 4px; display: block; margin: 0 auto; }
         
-        .description-text { font-size: 0.95em; line-height: 1.6; color: #444; white-space: pre-line; margin-bottom: 20px; }
+        .description-text { font-size: 0.95em; line-height: 1.6; color: #444; white-space: pre-line; }
         
+        /* Tablas */
         .tech-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; border: 1px solid #ddd; }
-        .tech-table th { background-color: #FFD700; color: #000; padding: 8px; text-align: left; border: 1px solid #ccc; width: 30%; }
+        .tech-table th { background-color: #FFD700; color: #000; padding: 10px; text-align: left; width: 30%; border: 1px solid #ccc; }
         .tech-table td { padding: 8px 10px; border: 1px solid #ddd; }
+        .tech-table tr:nth-child(even) { background-color: #fcfcfc; }
         
-        .details-box { background-color: #f9f9f9; padding: 15px; border: 1px solid #eee; margin-top: 20px; border-radius: 4px; }
-        .details-title { font-weight: bold; color: #003366; margin-bottom: 10px; display: block; border-bottom: 2px solid #FFD700; padding-bottom: 5px; width: fit-content; }
+        /* Títulos de sección interna */
+        h4 { color: #000; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 25px; font-size: 1em; text-transform: uppercase; }
         
-        .parts-list { list-style-type: none; padding: 0; font-size: 0.9em; columns: 2; }
-        .parts-list li { margin-bottom: 5px; break-inside: avoid; }
+        /* Tabla de Consumibles CSV */
+        .parts-table { width: 100%; font-size: 0.85em; border-collapse: collapse; margin-top: 20px; }
+        .parts-table th { background-color: #222; color: #fff; padding: 8px; text-align: left; }
+        .parts-table td { padding: 8px; border-bottom: 1px solid #ddd; }
+        .parts-table tr:hover { background-color: #fffbe6; }
+        .code-col { font-family: monospace; font-weight: bold; color: #005f9e; }
 
-        .safety-alert { background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-top: 30px; }
-        .safety-title { font-weight: bold; color: #e65100; display: flex; align-items: center; gap: 10px; font-size: 1.1em; margin-bottom: 10px; }
-
-        /* Botones de Descarga */
-        .download-container { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-        .btn-download { display: flex; align-items: center; justify-content: center; padding: 10px 15px; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9em; font-weight: bold; transition: background 0.3s; text-align: center; }
-        .btn-manual { background-color: #d32f2f; }
-        .btn-manual:hover { background-color: #b71c1c; }
-        .btn-folleto { background-color: #005f9e; }
+        /* Botones */
+        .btn-folleto {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #005f9e; /* Azul Folleto */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
         .btn-folleto:hover { background-color: #004475; }
+        
         .icon { margin-right: 8px; }
 
         .btn-back { display: inline-block; margin-top: 30px; padding: 12px 25px; background-color: #000; color: #FFD700; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; }
@@ -51,139 +67,209 @@
 <body>
 
     <div class="container">
-        <h1>TECNOLOGÍA DE SOLDADURA LÁSER</h1>
-        <p>Alta precisión, bajo riesgo de daños materiales y velocidad hasta 10 veces mayor que la soldadura convencional.</p>
+        <h1>CORTE POR PLASMA MANUAL</h1>
+
+        <h2>HANDYPLASMA (Portátil LCD)</h2>
 
         <div class="product-card">
             <div class="card-header">
-                <span class="product-name">SUMIGLASER 2000</span>
+                <span class="product-name">HandyPlasma 35i / 45i</span>
                 <span class="line-badge">Línea: LIGHT INDUSTRIAL</span>
             </div>
-            <span class="sap-code">SAP: 753577</span>
+            <span class="sap-code">SAP: 739966 (35i) / 739967 (45i)</span>
             
             <div class="grid-layout">
                 <div>
-                    <img src="imagenes/sumiglaser_2000.jpg" alt="Sumiglaser 2000" class="product-img">
-                    
-                    <div class="download-container">
-                        <a href="Manuales/manual_sumiglaser_2000.pdf" class="btn-download btn-manual" target="_blank">
-                            <span class="icon">📖</span> Descargar Manual Técnico
-                        </a>
-                        <a href="Folletos/folleto_sumiglaser_2000.pdf" class="btn-download btn-folleto" target="_blank">
-                            <span class="icon">📑</span> Ver Folleto Comercial
-                        </a>
-                    </div>
+                    <img src="imagenes/handyplasma.jpg" alt="ESAB HandyPlasma" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_handyplasma.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Comercial
+                    </a>
                 </div>
                 
                 <div>
                     <div class="description-text">
-                        SUMIGLASER 2000 ofrece una serie de beneficios que incluyen alta precisión, bajo riesgo de daños materiales y una velocidad de soldadura hasta 10 veces más rápida en comparación con la soldadura convencional.
-                        Es una solución completa que incluye fuente láser, alimentador de alambre y torcha láser ergonómica.
+                        Máquina de corte de plasma manual ligera y portátil, con sólo 13,5kg (incluida la torcha) y con alimentación monofásica 220V 50/60Hz.
+                        Su interfaz no sólo incorpora la última tecnología en un panel de color LCD, sino que también simplifica todo el proceso de configuración para corte.
+                        Con un solo botón, el operador puede seleccionar cada función para satisfacer todas sus necesidades.
                     </div>
+                    
                     <table class="tech-table">
-                        <tr><th>Potencia</th><td>2000 W</td></tr>
-                        <tr><th>Ciclo de Trabajo</th><td>100 %</td></tr>
-                        <tr><th>Alimentación</th><td>220 V Monofásico</td></tr>
-                        <tr><th>Alambres</th><td>0,80 mm a 1,60 mm</td></tr>
+                        <thead>
+                            <tr><th>Modelo</th><th>Corte Recomendado</th><th>Corte Máximo</th><th>Referencia</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>HandyPlasma 35i</strong></td><td>12 mm</td><td>16 mm</td><td>738920</td></tr>
+                            <tr><td><strong>HandyPlasma 45i</strong></td><td>16 mm</td><td>24 mm</td><td>738909</td></tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="details-box">
-                <span class="details-title">CONTENIDO DEL PAQUETE:</span>
-                <p style="font-size:0.9em; margin-bottom:10px;">
-                    Fuente laser, alimentador de alambre, torcha láser, rodillo U 1,2-1,6mm, rodillo V 1,2-1,6mm, tobera para soldadura a tope (1,2/1,6 mm), tobera para soldadura chanfro/plana (1,2/1,6mm), tobera para soldadura autógena, tubo de contacto.
-                </p>
-                <p style="font-size:0.9em; font-weight:bold;">Incluye EPP Específico:</p>
-                <ul class="parts-list" style="columns:1;">
-                    <li>Chaleco SumigPro de mangas largas (NR10 Dynamo CA49257. Tam. G)</li>
-                    <li>Lentes de protección (modelo XI-04P)</li>
-                    <li>Máscara de protección para soldadura laser</li>
-                    <li>Guantes de protección para soldadura laser</li>
-                </ul>
-            </div>
+            <h4>Consumibles y Accesorios (Torcha HandyPlasma 60A)</h4>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Descripción del Repuesto</th>
+                        <th>Detalle / Medida</th>
+                        <th>Código</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Torcha Completa</strong></td><td>HandyPlasma 60 A</td><td><strong>743213</strong></td></tr>
+                    <tr><td><strong>Boquilla de Corte</strong></td><td>35 A (0.8 mm)</td><td><strong>741381</strong></td></tr>
+                    <tr><td><strong>Boquilla de Corte</strong></td><td>45 A (0.9 mm)</td><td><strong>741382</strong></td></tr>
+                    <tr><td><strong>Electrodo</strong></td><td>60 A</td><td><strong>741383</strong></td></tr>
+                    <tr><td><strong>Difusor de Gas</strong></td><td>60 A</td><td><strong>741387</strong></td></tr>
+                    <tr><td><strong>Funda de Protección</strong></td><td>60 A (Shield Cup)</td><td><strong>741385</strong></td></tr>
+                    <tr><td><strong>Distanciador de Torcha</strong></td><td>60 A (Standoff)</td><td><strong>741384</strong></td></tr>
+                    <tr><td><strong>O-Ring</strong></td><td>60 A</td><td><strong>740166</strong></td></tr>
+                    <tr><td><strong>Filtro de Línea</strong></td><td>Aire</td><td><strong>740211</strong></td></tr>
+                    <tr><td><strong>Cartucho de Filtro</strong></td><td>Repuesto</td><td><strong>740212</strong></td></tr>
+                    <tr><td><strong>Guía de Corte Circular</strong></td><td>Cindal</td><td><strong>740213</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
 
-            <div class="details-box">
-                <span class="details-title">CONSUMIBLES Y REPUESTOS:</span>
-                <ul class="parts-list">
-                    <li><strong>753861:</strong> Boquilla p/ soldadura Autógena</li>
-                    <li><strong>753862/3:</strong> Boquilla Plana (1.2 / 1.6 mm)</li>
-                    <li><strong>753864/5:</strong> Boquilla Filete (1.2 / 1.6 mm)</li>
-                    <li><strong>753867:</strong> Lente Protectora</li>
-                    <li><strong>753869:</strong> Lente de Enfoque</li>
-                    <li><strong>753890:</strong> Lente Colimadora</li>
-                    <li><strong>753891-4:</strong> Picos de Contacto (0.8 - 1.6 mm)</li>
-                    <li><strong>753902:</strong> Tubo Capilar</li>
-                    <li><strong>753899/00:</strong> Liners (Rojo/Azul/Negro)</li>
-                </ul>
+        <h2>CUTMASTER TRUE SERIES (Torchas 1Torch SL60/SL100)</h2>
+
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">Cutmaster 40+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
+            </div>
+            <span class="sap-code">SAP: 749102</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/cutmaster_40plus.jpg" alt="Cutmaster 40+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_40plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 40+
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La Cutmaster 40+ es la combinación perfecta de potencia y portabilidad.
+                        Pantalla LCD TFT brillante de 10,9 cm. Muestra Corriente, voltaje y presión del aire.
+                        Equipada con Torcha industrial SL60 1Torch.
+                        Modo de corte de placas y metales expandidos. Gatillo 2T/4T.
+                    </div>
+                    <table class="tech-table">
+                        <tr><th>Alimentación</th><td>120 - 240 V (1 Fase)</td></tr>
+                        <tr><th>Perforación</th><td>12 mm (1/2")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>16 mm (5/8")</td></tr>
+                        <tr><th>Separación Máx</th><td>25 mm (1")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>40% @ 40A</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="product-card">
             <div class="card-header">
-                <span class="product-name">ESAB DUELER EHL 1500</span>
-                <span class="line-badge">Línea: LIGHT INDUSTRIAL</span>
+                <span class="product-name">Cutmaster 50+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
             </div>
-            <span class="sap-code">SAP: 753122</span>
+            <span class="sap-code">SAP: 749332</span>
             
             <div class="grid-layout">
                 <div>
-                    <img src="imagenes/dueler_ehl_1500.jpg" alt="ESAB Dueler 1500" class="product-img">
-                    
-                    <div class="download-container">
-                        <a href="Folletos/folleto_esab_dueler_1500.pdf" class="btn-download btn-folleto" target="_blank">
-                            <span class="icon">📑</span> Ver Folleto Comercial
-                        </a>
-                    </div>
+                    <img src="imagenes/cutmaster_50plus.jpg" alt="Cutmaster 50+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_50plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 50+
+                    </a>
                 </div>
                 
                 <div>
                     <div class="description-text">
-                        La soldadora láser ESAB Dueler EHL 1500 es una herramienta profesional portátil y de alta calidad diseñada para soldadura de precisión en acero inoxidable, acero al carbono y aluminio.
-                        Con tecnología láser avanzada y experiencia en integración, ofrece una precisión y eficiencia inigualables.
-                        Con su fuente de alimentación láser refrigerada por aire de 1500W, logra una penetración de hasta 6,5mm garantizando baja distorsión.
+                        Potencia trifásica en un paquete compacto.
+                        Incluye todas las funciones avanzadas de la serie Plus: Pantalla TFT, purga automática y detección de consumibles.
+                        Ideal para trabajos industriales que requieren mayor capacidad de perforación.
                     </div>
                     <table class="tech-table">
-                        <tr><th>Potencia</th><td>1500 W (Manual)</td></tr>
-                        <tr><th>Alimentación</th><td>220 V Monofásico</td></tr>
-                        <tr><th>Potencia Entrada</th><td>6 KW (27A)</td></tr>
-                        <tr><th>Dimensiones</th><td>1042 x 479 x 1014 mm</td></tr>
-                        <tr><th>Peso</th><td>105 kg</td></tr>
-                        <tr><th>Clase</th><td>IP23</td></tr>
+                        <tr><th>Alimentación</th><td>400 V (3 Fases)</td></tr>
+                        <tr><th>Perforación</th><td>16 mm (5/8")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>25 mm (1")</td></tr>
+                        <tr><th>Separación Máx</th><td>32 mm (1 1/4")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>60% @ 50A</td></tr>
                     </table>
                 </div>
             </div>
+        </div>
 
-            <div class="details-box">
-                <span class="details-title">EL EQUIPO INCLUYE:</span>
-                <p style="font-size:0.9em;">
-                    Fuente laser y alimentador compacto, Torcha láser (fibra 5m), Liners para Acero y Aluminio (4m), Rodillos de alimentación (Acero V y Aluminio U), Boquillas de alimentación (0.8-1.6mm), Kit de boquillas de cobre para torcha (1, 3, A, B, Plana), Protectores de lentes (5 pzas), Manguera de gas, Conector de seguridad DB25, Soporte móvil de torcha.
-                </p>
+        <div class="product-card">
+            <div class="card-header">
+                <span class="product-name">Cutmaster 70+</span>
+                <span class="line-badge">Línea: HEAVY INDUSTRIAL</span>
             </div>
-
-            <div class="details-box">
-                <span class="details-title">CONSUMIBLES Y ACCESORIOS:</span>
-                <ul class="parts-list">
-                    <li><strong>754367:</strong> Lente de Protección</li>
-                    <li><strong>754435:</strong> Lente de Enfoque</li>
-                    <li><strong>754369-23:</strong> Picos Dueler (Tipos D12 a D16)</li>
-                    <li><strong>754424:</strong> Soporte de mesa para torcha</li>
-                    <li><strong>754425/6:</strong> Guías de alambre (SS / Grafito)</li>
-                    <li><strong>754428-31:</strong> Picos de Alambre (0.8 - 1.6 mm)</li>
-                </ul>
+            <span class="sap-code">SAP: 749103</span>
+            
+            <div class="grid-layout">
+                <div>
+                    <img src="imagenes/cutmaster_70plus.jpg" alt="Cutmaster 70+" class="product-img" onerror="this.style.display='none'">
+                    <a href="Folletos/folleto_cutmaster_70plus.pdf" class="btn-folleto" target="_blank">
+                        <span class="icon">📑</span> Folleto Cutmaster 70+
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="description-text">
+                        La máquina más potente de la serie Plus.
+                        Diseñada para entornos de fabricación pesada donde la velocidad y el espesor de corte son críticos.
+                        Interfaz CNC disponible para integración en mesas de corte.
+                    </div>
+                    <table class="tech-table">
+                        <tr><th>Alimentación</th><td>400 V (3 Fases)</td></tr>
+                        <tr><th>Perforación</th><td>20 mm (3/4")</td></tr>
+                        <tr><th>Corte (Calidad)</th><td>30 mm (1 1/8")</td></tr>
+                        <tr><th>Separación Máx</th><td>38 mm (1 1/2")</td></tr>
+                        <tr><th>Ciclo de Trabajo</th><td>50% @ 70A</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <div class="safety-alert">
-            <div class="safety-title">⚠️ SEGURIDAD CRÍTICA: RADIACIÓN LÁSER CLASE 4</div>
-            <p>La radiación láser y los rayos del arco eléctrico pueden causar graves lesiones oculares y quemaduras en la piel. Es fundamental adoptar medidas rigurosas.</p>
-            <ul>
-                <li><strong>Visión:</strong> Use gafas de seguridad aprobadas para el rango de 1080 nm, siempre debajo del casco de soldadura.</li>
-                <li><strong>Cuerpo:</strong> Use EPP completo (guantes cuero, manga larga, delantal, protector piernas).</li>
-                <li><strong>Aislamiento:</strong> El área de trabajo debe estar aislada y señalizada.</li>
-                <li><strong>Protección Colectiva:</strong> Use cortinas contra radiación láser.</li>
-                <li><strong>Reflejos:</strong> Cuidado con los reflejos del láser en superficies brillantes.</li>
-            </ul>
+        <div class="product-card" style="border-top: 5px solid #000;">
+            <div class="card-header" style="background-color:#222; color:white;">
+                <span class="product-name" style="color:white;">CONSUMIBLES ORIGINALES VICTOR</span>
+                <span class="line-badge">TORCHAS SL60 / SL100</span>
+            </div>
+            
+            <div class="description-text">
+                Listado de códigos de repuesto originales para la serie Cutmaster True Series y Cutmaster Plus.
+                Incluye electrodos, capuchones mecanizados y puntas de ranurado.
+            </div>
+
+            <table class="parts-table">
+                <thead>
+                    <tr>
+                        <th>Código SAP</th>
+                        <th>Descripción del Producto</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="code-col">730782</td><td>ELECTRODO SL40 (9-0096)</td><td>Electrodo (Standard)</td></tr>
+                    <tr><td class="code-col">730804</td><td>ELECTRODO SL60/SL100 (9-8215)</td><td>Electrodo (Standard)</td></tr>
+                    <tr><td class="code-col">732597</td><td>ELECTRODO MECANIZADO SL100 (9-8232)</td><td>Electrodo (Mecanizado)</td></tr>
+
+                    <tr><td class="code-col">730822</td><td>SHIELD CAP, DRAG, 40A SL60/SL100 (9-8244)</td><td>Deflector de Arrastre</td></tr>
+                    <tr><td class="code-col">730826</td><td>SHIELD CAP, DRAG, 50-60A SL60/SL100 (9-8235)</td><td>Deflector de Arrastre</td></tr>
+                    <tr><td class="code-col">731677</td><td>CAPUCHON MECANIZADO 40AMP (9-8245)</td><td>Capuchón Mecanizado</td></tr>
+                    <tr><td class="code-col">731674</td><td>CAPUCHON MECANIZADO 50/60AMP (9-8238)</td><td>Capuchón Mecanizado</td></tr>
+                    <tr><td class="code-col">731675</td><td>CAPUCHON MECANIZADO 70/100AMP (9-8239)</td><td>Capuchón Mecanizado</td></tr>
+
+                    <tr><td class="code-col">730832</td><td>GOUGING TIP A SL60/SL100 (9-8225)</td><td>Ranurado (Perfil A)</td></tr>
+                    <tr><td class="code-col">730833</td><td>GOUGING TIP B SL60/SL100 (9-8226)</td><td>Ranurado (Perfil B)</td></tr>
+                    <tr><td class="code-col">730834</td><td>GOUGING TIP C SL60/SL100 (9-8227)</td><td>Ranurado (Perfil C)</td></tr>
+                    <tr><td class="code-col">730835</td><td>GOUGING TIP D SL60/SL100 (9-8228)</td><td>Ranurado (Perfil D)</td></tr>
+
+                    <tr><td class="code-col">734469</td><td>CABEZA DE TORCHA - SL 60/ SL 100</td><td>Repuesto Torcha</td></tr>
+                    <tr><td class="code-col">732781</td><td>O-RING (SL60) - Torcha mecanizada SL (8-3486)</td><td>Juntas / O-Ring</td></tr>
+                    <tr><td class="code-col">734468</td><td>O-RING GRANDE- SL 60/ SL 100 - SL</td><td>Juntas / O-Ring</td></tr>
+                    <tr><td class="code-col">734510</td><td>Ohmic Clip SL60/SL100 (9-8259)</td><td>Clip Óhmico (CNC)</td></tr>
+                </tbody>
+            </table>
         </div>
 
         <a href="index.html" class="btn-back">← Volver al Menú Principal</a>
